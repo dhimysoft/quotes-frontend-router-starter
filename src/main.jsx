@@ -18,3 +18,15 @@ createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </StrictMode>,
 )
+
+
+src/
+  pages/
+    Home.jsx
+    QuoteDetail.jsx
+    AddQuote.jsx
+    NotFound.jsx
+  components/
+    Navbar.jsx
+  routes.jsx
+  main.jsx

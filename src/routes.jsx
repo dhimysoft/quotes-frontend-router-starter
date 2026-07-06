@@ -14,11 +14,19 @@
 // TODO (Part 4): bring in the AddQuote page
 // TODO (Part 5): bring in the NotFound page
 
+import { BrowserRouter, Routes, Route } from "react-router";
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import QuoteDetail from "./pages/QuoteDetail";
+import AddQuote from "./pages/AddQuote";
+import NotFound from "./pages/NotFound";
+
 function AppRoutes() {
   return (
     <>
       {/* TODO (Part 2): render the navbar here, above your routes,
           so it shows no matter which page is active */}
+      <Navbar />
 
       {/*
         TODO: define your routes below.
@@ -38,8 +46,15 @@ function AppRoutes() {
 
         Docs: https://reactrouter.com/start/declarative/routing
       */}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/quotes/new" element={<AddQuote />} />
+        <Route path="/quotes/:id" element={<QuoteDetail />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default AppRoutes
+export default AppRoutes;

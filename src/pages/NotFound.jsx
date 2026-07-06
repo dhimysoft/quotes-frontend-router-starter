@@ -7,11 +7,17 @@
 // TODO (Part 5): bring in the component for client-side navigation
 //   links. Docs: https://reactrouter.com/start/declarative/navigating#link
 
+
+import { Link } from "react-router";
+
 function NotFound() {
   return (
     <div className="app">
       <h1>Page not found</h1>
       {/* TODO (Part 5): a link back to the home page */}
+      <p>Sorry, this page does not exist.</p>
+
+    <Link to="/">Back to Home</Link>
     </div>
   )
 }

@@ -125,3 +125,8 @@ button:hover {
   color: var(--text);
   text-decoration: none;
 }
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
